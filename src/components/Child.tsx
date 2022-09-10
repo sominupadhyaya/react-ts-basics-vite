@@ -6,16 +6,21 @@ import { FC } from "react"
 type PropTypes = {
   hello : string
   age ?: number // use this to declare an optional value
+  // Using with function
+  setArrayValue : (array:number[]) => void
 }
 
 
 
-const Child:FC <PropTypes> = ({hello}) => {
-  return (
+const Child:FC <PropTypes> = ({hello , setArrayValue}) => {
+    const childData = [1,2]
+    const handleClick = () => setArrayValue(childData)
+    return (
     <>
     <h1>
     {hello}
     </h1>
+    <button onClick={handleClick}>Change Array Value</button>   
     </>
   )
 }
