@@ -15,6 +15,7 @@ type PropTypes = {
 const Child:FC <PropTypes> = ({hello , setArrayValue}) => {
   const array:number[] = []  
   const handleClick = () => setArrayValue(array) 
+  // basically does setArr([] => [...[],[].length+1]) for 1st instance 
     return (
     <>
     <h1>
