@@ -13,8 +13,8 @@ type PropTypes = {
 
 
 const Child:FC <PropTypes> = ({hello , setArrayValue}) => {
-    const childData = [1,2]
-    const handleClick = () => setArrayValue(childData)
+  const array:number[] = []  
+  const handleClick = () => setArrayValue(array) 
     return (
     <>
     <h1>
