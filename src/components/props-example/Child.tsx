@@ -10,11 +10,12 @@ type PropTypes = {
   setArrayValue : (array:number[]) => void
 }
 
+  type OnClickHandler = (e : React.MouseEvent<HTMLButtonElement>) => void //syntax for event handler function i.e onClick handler
 
 
 const Child:FC <PropTypes> = ({hello , setArrayValue}) => {
   const array:number[] = []  
-  const handleClick = () => setArrayValue(array) 
+  const handleClick:OnClickHandler = (e) => setArrayValue(array) 
   // basically does setArr([] => [...[],[].length+1]) for 1st instance 
     return (
     <>
